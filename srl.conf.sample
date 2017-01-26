@@ -2,6 +2,6 @@
 ACCOUNT=exmaple
 PASSWD=passwd
 
-SSL_MAILADDR=masa@masa23.jp
+SSL_MAILADDR=postmaster@example.sakura.ne.jp
 SNI_DOMAIN=ssl.example.jp
 DOCUMENTROOT=/home/$ACCOUNT/www/ssl

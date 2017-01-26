@@ -4,7 +4,7 @@ cd `dirname $0`
 
 . ./srl.conf
 
-# ¾ÚÌÀ½ñ½èÍı 
+# è¨¼æ˜æ›¸å‡¦ç† 
 if [ -d ./certificates ]; then
     ./lego/lego --path ./ --webroot "$DOCUMENTROOT" --email "$SSL_MAILADDR" --domains "$SNI_DOMAIN" --accept-tos renew 
     renew=1
@@ -41,7 +41,7 @@ curl -qs -b cookie -c cookie -L -X POST https://secure.sakura.ad.jp/rscontrol/ \
 if [ $renew -eq 1 ] ; then
     get_token "https://secure.sakura.ad.jp/rscontrol/rs/ssl?SNIDomain=${SNI_DOMAIN}"
     curl -qs -b cookie -c cookie -L -X POST "https://secure.sakura.ad.jp/rscontrol/rs/ssl?SNIDomain=${SNI_DOMAIN}" \
-    -d "Token=$token&Target=new&Submit_newdir=ÈëÌ©¸°¤ò´Ş¤à¿·¤·¤¤ÀßÄê¤ÎºîÀ®" \
+    -d "Token=$token&Target=new&Submit_newdir=ç§˜å¯†éµã‚’å«ã‚€æ–°ã—ã„è¨­å®šã®ä½œæˆ" \
     -o /dev/null
 fi
 
